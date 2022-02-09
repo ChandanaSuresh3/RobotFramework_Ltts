@@ -30,6 +30,6 @@ TC1 Valid Login
    Input Text    id=emgcontacts_relationship    Brother
    Input Text    id=emgcontacts_homePhone    9876543210
    Click Element    id=btnSaveEContact
-
+   Close Browser
 
 
