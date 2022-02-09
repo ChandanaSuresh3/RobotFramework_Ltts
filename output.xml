@@ -1,168 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220209 08:59:57.744" rpa="false" schemaversion="2">
-<suite id="s1" name="Orange Hrm Suite" source="C:\Users\Chandhana\OneDrive\Desktop\LTTS\robot_framework\selenium_suite\orange_hrm_suite.robot">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220209 12:24:46.212" rpa="false" schemaversion="2">
+<suite id="s1" name="openEMR suite" source="C:\Users\Chandhana\OneDrive\Desktop\LTTS\robot_framework\selenium_suite\openEMR_suite.robot">
 <test id="s1-t1" name="TC1 Valid Login">
 <kw name="Append To Environment Variable" library="OperatingSystem">
 <arg>path</arg>
 <arg>${EXECDIR}\\drivers</arg>
 <doc>Appends given ``values`` to environment variable ``name``.</doc>
-<msg timestamp="20220209 08:59:58.073" level="INFO">Environment variable 'path' set to value 'C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_162\bin;C:\Program Files\Java\jre1.8.0_162\bin;C:\Program Files\Git\cmd;C:\Users\Chandhana\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\Chandhana\AppData\Local\Programs\Python\Python310\;C:\Users\Chandhana\AppData\Local\Microsoft\WindowsApps;;C:\Users\Chandhana\OneDrive\Desktop\LTTS\robot_framework\drivers'.</msg>
-<status status="PASS" starttime="20220209 08:59:58.073" endtime="20220209 08:59:58.073"/>
+<msg timestamp="20220209 12:24:46.581" level="INFO">Environment variable 'path' set to value 'C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_162\bin;C:\Program Files\Java\jre1.8.0_162\bin;C:\Program Files\Git\cmd;C:\Users\Chandhana\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\Chandhana\AppData\Local\Programs\Python\Python310\;C:\Users\Chandhana\AppData\Local\Microsoft\WindowsApps;;C:\Users\Chandhana\OneDrive\Desktop\LTTS\robot_framework\drivers'.</msg>
+<status status="PASS" starttime="20220209 12:24:46.581" endtime="20220209 12:24:46.581"/>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>url=https://opensource-demo.orangehrmlive.com/</arg>
+<arg>url=https://demo.openemr.io/b/openemr/index.php</arg>
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220209 08:59:58.074" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
-<status status="PASS" starttime="20220209 08:59:58.074" endtime="20220209 09:00:04.891"/>
+<msg timestamp="20220209 12:24:46.583" level="INFO">Opening browser 'chrome' to base url 'https://demo.openemr.io/b/openemr/index.php'.</msg>
+<status status="PASS" starttime="20220209 12:24:46.583" endtime="20220209 12:24:53.719"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220209 12:24:53.720" endtime="20220209 12:24:53.861"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220209 12:24:53.863" endtime="20220209 12:24:53.867"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>id=txtUsername</arg>
-<arg>Admin</arg>
+<arg>id=authUser</arg>
+<arg>admin</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220209 09:00:04.893" level="INFO">Typing text 'Admin' into text field 'id=txtUsername'.</msg>
-<status status="PASS" starttime="20220209 09:00:04.892" endtime="20220209 09:00:04.978"/>
+<msg timestamp="20220209 12:24:53.871" level="INFO">Typing text 'admin' into text field 'id=authUser'.</msg>
+<status status="PASS" starttime="20220209 12:24:53.867" endtime="20220209 12:24:54.027"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
-<arg>id=txtPassword</arg>
-<arg>admin123</arg>
+<arg>id=clearPass</arg>
+<arg>pass</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220209 09:00:04.979" level="INFO">Typing password into text field 'id=txtPassword'.</msg>
-<msg timestamp="20220209 09:00:05.022" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220209 09:00:05.063" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220209 09:00:04.979" endtime="20220209 09:00:05.063"/>
+<msg timestamp="20220209 12:24:54.028" level="INFO">Typing password into text field 'id=clearPass'.</msg>
+<msg timestamp="20220209 12:24:54.109" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220209 12:24:54.194" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220209 12:24:54.028" endtime="20220209 12:24:54.194"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>name=languageChoice</arg>
+<arg>English (Indian)</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220209 12:24:54.195" level="INFO">Selecting options from selection list 'name=languageChoice' by label English (Indian).</msg>
+<status status="PASS" starttime="20220209 12:24:54.195" endtime="20220209 12:24:54.310"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>id=btnLogin</arg>
+<arg>xpath=//button[@type='submit']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220209 09:00:05.064" level="INFO">Clicking element 'id=btnLogin'.</msg>
-<status status="PASS" starttime="20220209 09:00:05.064" endtime="20220209 09:00:06.859"/>
+<msg timestamp="20220209 12:24:54.311" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20220209 12:24:54.310" endtime="20220209 12:24:58.201"/>
 </kw>
-<kw name="Get Location" library="SeleniumLibrary">
-<var>${url}</var>
-<doc>Returns the current browser window URL.</doc>
-<msg timestamp="20220209 09:00:06.865" level="INFO">${url} = https://opensource-demo.orangehrmlive.com/index.php/auth/validateCredentials</msg>
-<status status="PASS" starttime="20220209 09:00:06.860" endtime="20220209 09:00:06.865"/>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20220209 12:24:58.210" level="INFO">${title} = OpenEMR</msg>
+<status status="PASS" starttime="20220209 12:24:58.201" endtime="20220209 12:24:58.210"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${url}</arg>
+<arg>${title}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220209 09:00:06.866" endtime="20220209 09:00:06.866"/>
+<status status="PASS" starttime="20220209 12:24:58.210" endtime="20220209 12:24:58.211"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id=welcome</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220209 09:00:06.867" level="INFO">Clicking element 'id=welcome'.</msg>
-<msg timestamp="20220209 09:00:07.022" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20220209 09:00:07.065" level="FAIL">Element with locator 'id=welcome' not found.</msg>
-<status status="FAIL" starttime="20220209 09:00:06.866" endtime="20220209 09:00:07.066"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20220209 09:00:07.066" endtime="20220209 09:00:07.066"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>link=Logout</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220209 09:00:07.067" endtime="20220209 09:00:07.067"/>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>OpenEMR</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220209 12:24:58.216" level="INFO">Page title is 'OpenEMR'.</msg>
+<status status="PASS" starttime="20220209 12:24:58.211" endtime="20220209 12:24:58.216"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="NOT RUN" starttime="20220209 09:00:07.067" endtime="20220209 09:00:07.067"/>
+<status status="PASS" starttime="20220209 12:24:58.216" endtime="20220209 12:25:00.361"/>
 </kw>
-<status status="FAIL" starttime="20220209 08:59:58.072" endtime="20220209 09:00:07.067">Element with locator 'id=welcome' not found.</status>
+<status status="PASS" starttime="20220209 12:24:46.580" endtime="20220209 12:25:00.362"/>
 </test>
-<test id="s1-t2" name=" TC2 Add Emergency Contact">
-<kw name="Append To Environment Variable" library="OperatingSystem">
-<arg>path</arg>
-<arg>${EXECDIR}\\drivers</arg>
-<doc>Appends given ``values`` to environment variable ``name``.</doc>
-<msg timestamp="20220209 09:00:07.070" level="INFO">Environment variable 'path' set to value 'C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_162\bin;C:\Program Files\Java\jre1.8.0_162\bin;C:\Program Files\Git\cmd;C:\Users\Chandhana\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\Chandhana\AppData\Local\Programs\Python\Python310\;C:\Users\Chandhana\AppData\Local\Microsoft\WindowsApps;;C:\Users\Chandhana\OneDrive\Desktop\LTTS\robot_framework\drivers;C:\Users\Chandhana\OneDrive\Desktop\LTTS\robot_framework\drivers'.</msg>
-<status status="PASS" starttime="20220209 09:00:07.070" endtime="20220209 09:00:07.070"/>
-</kw>
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>url=https://opensource-demo.orangehrmlive.com/</arg>
-<arg>browser=chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220209 09:00:07.072" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
-<status status="PASS" starttime="20220209 09:00:07.072" endtime="20220209 09:00:12.989"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=txtUsername</arg>
-<arg>Admin</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220209 09:00:12.990" level="INFO">Typing text 'Admin' into text field 'id=txtUsername'.</msg>
-<status status="PASS" starttime="20220209 09:00:12.989" endtime="20220209 09:00:13.081"/>
-</kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>id=txtPassword</arg>
-<arg>admin123</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220209 09:00:13.082" level="INFO">Typing password into text field 'id=txtPassword'.</msg>
-<msg timestamp="20220209 09:00:13.129" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220209 09:00:13.173" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220209 09:00:13.081" endtime="20220209 09:00:13.173"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>name=Submit</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220209 09:00:13.174" level="INFO">Clicking element 'name=Submit'.</msg>
-<status status="PASS" starttime="20220209 09:00:13.173" endtime="20220209 09:00:14.504"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>link=My Info</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220209 09:00:14.505" level="INFO">Clicking element 'link=My Info'.</msg>
-<msg timestamp="20220209 09:00:14.669" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20220209 09:00:14.671" level="FAIL">Element with locator 'link=My Info' not found.</msg>
-<status status="FAIL" starttime="20220209 09:00:14.504" endtime="20220209 09:00:14.671"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>link=Emergency Contacts</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220209 09:00:14.672" endtime="20220209 09:00:14.672"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id=btnAddContact</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220209 09:00:14.672" endtime="20220209 09:00:14.672"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=emgcontacts_name</arg>
-<arg>Raam</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220209 09:00:14.673" endtime="20220209 09:00:14.673"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=emgcontacts_relationship</arg>
-<arg>Brother</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220209 09:00:14.673" endtime="20220209 09:00:14.673"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=emgcontacts_homePhone</arg>
-<arg>9876543210</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220209 09:00:14.674" endtime="20220209 09:00:14.674"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id=btnSaveEContact</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220209 09:00:14.674" endtime="20220209 09:00:14.674"/>
-</kw>
-<status status="FAIL" starttime="20220209 09:00:07.069" endtime="20220209 09:00:14.675">Element with locator 'link=My Info' not found.</status>
-</test>
-<status status="FAIL" starttime="20220209 08:59:57.745" endtime="20220209 09:00:14.676"/>
+<status status="PASS" starttime="20220209 12:24:46.214" endtime="20220209 12:25:00.365"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="2" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="2" skip="0" id="s1" name="Orange Hrm Suite">Orange Hrm Suite</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="openEMR suite">openEMR suite</stat>
 </suite>
 </statistics>
 <errors>

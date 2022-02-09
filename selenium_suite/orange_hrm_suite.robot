@@ -6,13 +6,14 @@ Library     OperatingSystem
 TC1 Valid Login
      Append To Environment Variable    path      ${EXECDIR}\\drivers
      Open Browser  url=https://opensource-demo.orangehrmlive.com/    browser=chrome
+     Set Selenium Implicit Wait    30s
      Input Text    id=txtUsername   Admin
      Input Password    id=txtPassword    admin123
      Click Element    id=btnLogin
      ${url}  Get Location
      Log To Console    ${url}
      Click Element    id=welcome
-     Sleep    5s
+     #Sleep    5s
      Click Element    link=Logout
      Close Browser
 
@@ -20,6 +21,7 @@ TC1 Valid Login
  TC2 Add Emergency Contact
    Append To Environment Variable    path      ${EXECDIR}\\drivers
    Open Browser  url=https://opensource-demo.orangehrmlive.com/    browser=chrome
+   Set Selenium Implicit Wait    30s
    Input Text    id=txtUsername    Admin
    Input Password  id=txtPassword      admin123
    Click Element  name=Submit
