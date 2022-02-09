@@ -1,83 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220209 12:24:46.212" rpa="false" schemaversion="2">
-<suite id="s1" name="openEMR suite" source="C:\Users\Chandhana\OneDrive\Desktop\LTTS\robot_framework\selenium_suite\openEMR_suite.robot">
-<test id="s1-t1" name="TC1 Valid Login">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220209 14:25:12.263" rpa="false" schemaversion="2">
+<suite id="s1" name="Nasscom" source="C:\Users\Chandhana\OneDrive\Desktop\LTTS\robot_framework\selenium_suite\nasscom.robot">
+<test id="s1-t1" name="TC1">
 <kw name="Append To Environment Variable" library="OperatingSystem">
 <arg>path</arg>
 <arg>${EXECDIR}\\drivers</arg>
 <doc>Appends given ``values`` to environment variable ``name``.</doc>
-<msg timestamp="20220209 12:24:46.581" level="INFO">Environment variable 'path' set to value 'C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_162\bin;C:\Program Files\Java\jre1.8.0_162\bin;C:\Program Files\Git\cmd;C:\Users\Chandhana\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\Chandhana\AppData\Local\Programs\Python\Python310\;C:\Users\Chandhana\AppData\Local\Microsoft\WindowsApps;;C:\Users\Chandhana\OneDrive\Desktop\LTTS\robot_framework\drivers'.</msg>
-<status status="PASS" starttime="20220209 12:24:46.581" endtime="20220209 12:24:46.581"/>
+<msg timestamp="20220209 14:25:12.523" level="INFO">Environment variable 'path' set to value 'C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_162\bin;C:\Program Files\Java\jre1.8.0_162\bin;C:\Program Files\Git\cmd;C:\Users\Chandhana\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\Chandhana\AppData\Local\Programs\Python\Python310\;C:\Users\Chandhana\AppData\Local\Microsoft\WindowsApps;;C:\Users\Chandhana\OneDrive\Desktop\LTTS\robot_framework\drivers'.</msg>
+<status status="PASS" starttime="20220209 14:25:12.522" endtime="20220209 14:25:12.523"/>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>url=https://demo.openemr.io/b/openemr/index.php</arg>
+<arg>url=https://nasscom.in/about-us/career</arg>
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220209 12:24:46.583" level="INFO">Opening browser 'chrome' to base url 'https://demo.openemr.io/b/openemr/index.php'.</msg>
-<status status="PASS" starttime="20220209 12:24:46.583" endtime="20220209 12:24:53.719"/>
+<msg timestamp="20220209 14:25:12.524" level="INFO">Opening browser 'chrome' to base url 'https://nasscom.in/about-us/career'.</msg>
+<status status="PASS" starttime="20220209 14:25:12.523" endtime="20220209 14:25:18.518"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220209 12:24:53.720" endtime="20220209 12:24:53.861"/>
+<status status="PASS" starttime="20220209 14:25:18.519" endtime="20220209 14:25:18.646"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>5s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220209 12:24:53.863" endtime="20220209 12:24:53.867"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=authUser</arg>
-<arg>admin</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220209 12:24:53.871" level="INFO">Typing text 'admin' into text field 'id=authUser'.</msg>
-<status status="PASS" starttime="20220209 12:24:53.867" endtime="20220209 12:24:54.027"/>
-</kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>id=clearPass</arg>
-<arg>pass</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220209 12:24:54.028" level="INFO">Typing password into text field 'id=clearPass'.</msg>
-<msg timestamp="20220209 12:24:54.109" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220209 12:24:54.194" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220209 12:24:54.028" endtime="20220209 12:24:54.194"/>
-</kw>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<arg>name=languageChoice</arg>
-<arg>English (Indian)</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<msg timestamp="20220209 12:24:54.195" level="INFO">Selecting options from selection list 'name=languageChoice' by label English (Indian).</msg>
-<status status="PASS" starttime="20220209 12:24:54.195" endtime="20220209 12:24:54.310"/>
+<status status="PASS" starttime="20220209 14:25:18.647" endtime="20220209 14:25:18.651"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//button[@type='submit']</arg>
+<arg>xpath=//a[text()=' New User ']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220209 12:24:54.311" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
-<status status="PASS" starttime="20220209 12:24:54.310" endtime="20220209 12:24:58.201"/>
+<msg timestamp="20220209 14:25:18.654" level="INFO">Clicking element 'xpath=//a[text()=' New User ']'.</msg>
+<status status="PASS" starttime="20220209 14:25:18.652" endtime="20220209 14:25:18.879"/>
 </kw>
-<kw name="Get Title" library="SeleniumLibrary">
-<var>${title}</var>
-<doc>Returns the title of the current page.</doc>
-<msg timestamp="20220209 12:24:58.210" level="INFO">${title} = OpenEMR</msg>
-<status status="PASS" starttime="20220209 12:24:58.201" endtime="20220209 12:24:58.210"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=edit-field-fname-reg</arg>
+<arg>admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220209 14:25:18.882" level="INFO">Typing text 'admin' into text field 'id=edit-field-fname-reg'.</msg>
+<status status="PASS" starttime="20220209 14:25:18.880" endtime="20220209 14:25:18.998"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${title}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220209 12:24:58.210" endtime="20220209 12:24:58.211"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=edit-field-lname</arg>
+<arg>pass</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220209 14:25:19.000" level="INFO">Typing text 'pass' into text field 'id=edit-field-lname'.</msg>
+<status status="PASS" starttime="20220209 14:25:19.000" endtime="20220209 14:25:19.112"/>
 </kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<arg>OpenEMR</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220209 12:24:58.216" level="INFO">Page title is 'OpenEMR'.</msg>
-<status status="PASS" starttime="20220209 12:24:58.211" endtime="20220209 12:24:58.216"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=edit-mail</arg>
+<arg>admin@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220209 14:25:19.113" level="INFO">Typing text 'admin@gmail.com' into text field 'id=edit-mail'.</msg>
+<status status="PASS" starttime="20220209 14:25:19.112" endtime="20220209 14:25:19.241"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220209 12:24:58.216" endtime="20220209 12:25:00.361"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=edit-field-company-name-registration</arg>
+<arg>Google</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220209 14:25:19.242" level="INFO">Typing text 'Google' into text field 'id=edit-field-company-name-registration'.</msg>
+<status status="PASS" starttime="20220209 14:25:19.242" endtime="20220209 14:25:19.323"/>
 </kw>
-<status status="PASS" starttime="20220209 12:24:46.580" endtime="20220209 12:25:00.362"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//select[@id='edit-field-business-focus-reg']/option[@value='51']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220209 14:25:19.324" level="INFO">Clicking element 'xpath=//select[@id='edit-field-business-focus-reg']/option[@value='51']'.</msg>
+<status status="PASS" starttime="20220209 14:25:19.324" endtime="20220209 14:25:19.356"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=edit-submit--2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220209 14:25:19.357" level="INFO">Clicking element 'id=edit-submit--2'.</msg>
+<status status="PASS" starttime="20220209 14:25:19.357" endtime="20220209 14:25:19.415"/>
+</kw>
+<status status="PASS" starttime="20220209 14:25:12.521" endtime="20220209 14:25:19.416"/>
 </test>
-<status status="PASS" starttime="20220209 12:24:46.214" endtime="20220209 12:25:00.365"/>
+<status status="PASS" starttime="20220209 14:25:12.265" endtime="20220209 14:25:19.419"/>
 </suite>
 <statistics>
 <total>
@@ -86,7 +82,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="openEMR suite">openEMR suite</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Nasscom">Nasscom</stat>
 </suite>
 </statistics>
 <errors>
