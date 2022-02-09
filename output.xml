@@ -1,79 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220209 14:25:12.263" rpa="false" schemaversion="2">
-<suite id="s1" name="Nasscom" source="C:\Users\Chandhana\OneDrive\Desktop\LTTS\robot_framework\selenium_suite\nasscom.robot">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220209 15:09:49.685" rpa="false" schemaversion="2">
+<suite id="s1" name="Medibuddy" source="C:\Users\Chandhana\OneDrive\Desktop\LTTS\robot_framework\selenium_suite\medibuddy.robot">
 <test id="s1-t1" name="TC1">
 <kw name="Append To Environment Variable" library="OperatingSystem">
 <arg>path</arg>
 <arg>${EXECDIR}\\drivers</arg>
 <doc>Appends given ``values`` to environment variable ``name``.</doc>
-<msg timestamp="20220209 14:25:12.523" level="INFO">Environment variable 'path' set to value 'C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_162\bin;C:\Program Files\Java\jre1.8.0_162\bin;C:\Program Files\Git\cmd;C:\Users\Chandhana\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\Chandhana\AppData\Local\Programs\Python\Python310\;C:\Users\Chandhana\AppData\Local\Microsoft\WindowsApps;;C:\Users\Chandhana\OneDrive\Desktop\LTTS\robot_framework\drivers'.</msg>
-<status status="PASS" starttime="20220209 14:25:12.522" endtime="20220209 14:25:12.523"/>
+<msg timestamp="20220209 15:09:50.058" level="INFO">Environment variable 'path' set to value 'C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_162\bin;C:\Program Files\Java\jre1.8.0_162\bin;C:\Program Files\Git\cmd;C:\Users\Chandhana\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\Chandhana\AppData\Local\Programs\Python\Python310\;C:\Users\Chandhana\AppData\Local\Microsoft\WindowsApps;;C:\Users\Chandhana\OneDrive\Desktop\LTTS\robot_framework\drivers'.</msg>
+<status status="PASS" starttime="20220209 15:09:50.058" endtime="20220209 15:09:50.058"/>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>url=https://nasscom.in/about-us/career</arg>
+<arg>url=https://www.medibuddy.in/</arg>
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220209 14:25:12.524" level="INFO">Opening browser 'chrome' to base url 'https://nasscom.in/about-us/career'.</msg>
-<status status="PASS" starttime="20220209 14:25:12.523" endtime="20220209 14:25:18.518"/>
+<msg timestamp="20220209 15:09:50.059" level="INFO">Opening browser 'chrome' to base url 'https://www.medibuddy.in/'.</msg>
+<status status="PASS" starttime="20220209 15:09:50.059" endtime="20220209 15:09:52.808"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220209 14:25:18.519" endtime="20220209 14:25:18.646"/>
+<status status="PASS" starttime="20220209 15:09:52.811" endtime="20220209 15:09:52.966"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>5s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220209 14:25:18.647" endtime="20220209 14:25:18.651"/>
+<status status="PASS" starttime="20220209 15:09:52.967" endtime="20220209 15:09:52.971"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//a[text()=' New User ']</arg>
+<arg>//a[text()='For Employer']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220209 14:25:18.654" level="INFO">Clicking element 'xpath=//a[text()=' New User ']'.</msg>
-<status status="PASS" starttime="20220209 14:25:18.652" endtime="20220209 14:25:18.879"/>
+<msg timestamp="20220209 15:09:52.973" level="INFO">Clicking element '//a[text()='For Employer']'.</msg>
+<status status="PASS" starttime="20220209 15:09:52.973" endtime="20220209 15:09:54.116"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>MediBuddy LaunchPad</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20220209 15:09:54.116" endtime="20220209 15:09:57.216"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>link=Sign up</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220209 15:09:57.219" level="INFO">Clicking element 'link=Sign up'.</msg>
+<status status="PASS" starttime="20220209 15:09:57.218" endtime="20220209 15:09:57.466"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>id=edit-field-fname-reg</arg>
+<arg>id=name</arg>
 <arg>admin</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220209 14:25:18.882" level="INFO">Typing text 'admin' into text field 'id=edit-field-fname-reg'.</msg>
-<status status="PASS" starttime="20220209 14:25:18.880" endtime="20220209 14:25:18.998"/>
+<msg timestamp="20220209 15:09:57.468" level="INFO">Typing text 'admin' into text field 'id=name'.</msg>
+<status status="PASS" starttime="20220209 15:09:57.467" endtime="20220209 15:09:57.744"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>id=edit-field-lname</arg>
-<arg>pass</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220209 14:25:19.000" level="INFO">Typing text 'pass' into text field 'id=edit-field-lname'.</msg>
-<status status="PASS" starttime="20220209 14:25:19.000" endtime="20220209 14:25:19.112"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=edit-mail</arg>
+<arg>id=email</arg>
 <arg>admin@gmail.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220209 14:25:19.113" level="INFO">Typing text 'admin@gmail.com' into text field 'id=edit-mail'.</msg>
-<status status="PASS" starttime="20220209 14:25:19.112" endtime="20220209 14:25:19.241"/>
+<msg timestamp="20220209 15:09:57.745" level="INFO">Typing text 'admin@gmail.com' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20220209 15:09:57.745" endtime="20220209 15:09:57.979"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>id=edit-field-company-name-registration</arg>
-<arg>Google</arg>
+<arg>id=companyName</arg>
+<arg>cs@ltts.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220209 14:25:19.242" level="INFO">Typing text 'Google' into text field 'id=edit-field-company-name-registration'.</msg>
-<status status="PASS" starttime="20220209 14:25:19.242" endtime="20220209 14:25:19.323"/>
+<msg timestamp="20220209 15:09:57.981" level="INFO">Typing text 'cs@ltts.com' into text field 'id=companyName'.</msg>
+<status status="PASS" starttime="20220209 15:09:57.980" endtime="20220209 15:09:58.078"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//select[@id='edit-field-business-focus-reg']/option[@value='51']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220209 14:25:19.324" level="INFO">Clicking element 'xpath=//select[@id='edit-field-business-focus-reg']/option[@value='51']'.</msg>
-<status status="PASS" starttime="20220209 14:25:19.324" endtime="20220209 14:25:19.356"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=mobileNumber</arg>
+<arg>9876543210</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220209 15:09:58.080" level="INFO">Typing text '9876543210' into text field 'id=mobileNumber'.</msg>
+<status status="PASS" starttime="20220209 15:09:58.079" endtime="20220209 15:09:58.206"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id=edit-submit--2</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220209 14:25:19.357" level="INFO">Clicking element 'id=edit-submit--2'.</msg>
-<status status="PASS" starttime="20220209 14:25:19.357" endtime="20220209 14:25:19.415"/>
-</kw>
-<status status="PASS" starttime="20220209 14:25:12.521" endtime="20220209 14:25:19.416"/>
+<status status="PASS" starttime="20220209 15:09:50.057" endtime="20220209 15:09:58.206"/>
 </test>
-<status status="PASS" starttime="20220209 14:25:12.265" endtime="20220209 14:25:19.419"/>
+<status status="PASS" starttime="20220209 15:09:49.686" endtime="20220209 15:09:58.206"/>
 </suite>
 <statistics>
 <total>
@@ -82,7 +81,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Nasscom">Nasscom</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Medibuddy">Medibuddy</stat>
 </suite>
 </statistics>
 <errors>
