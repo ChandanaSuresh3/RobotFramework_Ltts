@@ -26,7 +26,7 @@ TC1 Valid Login
    Click Element    link=My Info
    Click Element    link=Emergency Contacts
    Click Element    id=btnAddContact
-   Input Text    id=emgcontacts_name    Raam
+   Input Text    id=emgcontacts_name    raj
    Input Text    id=emgcontacts_relationship    Brother
    Input Text    id=emgcontacts_homePhone    9876543210
    Click Element    id=btnSaveEContact
