@@ -15,3 +15,6 @@ TC1
    Input Text    id=email    admin@gmail.com
    Input Text    id=companyName    cs@ltts.com
    Input Text    id=mobileNumber    9876543210
+   #Click Element    class=btn-primary
+   Click Element    xpath=//input[@value='Next']
+   Close Window
