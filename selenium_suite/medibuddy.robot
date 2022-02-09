@@ -8,7 +8,7 @@ TC1
    Open Browser  url=https://www.medibuddy.in/   browser=chrome
    Maximize Browser Window
    Set Selenium Implicit Wait    5s
-   Click Element    //a[text()='For Employer']
+   Click Element    xpath=//a[text()='For Employer']
    Switch Window    MediBuddy LaunchPad
    Click Element    link=Sign up
    Input Text    id=name    admin
