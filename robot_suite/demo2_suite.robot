@@ -2,6 +2,7 @@
 ${MY_NAME}      Chandana Suresh
 @{COLORS}   red     green   yellow  black   blue
 &{EMPLOYEE1}    empid=101   empname=chandu  age=23
+&{PERSONAL_DETAIL}      fname=Chandana     lname=Suresh     mobile=9876543210
 
 *** Test Cases ***
 TC1
@@ -37,3 +38,9 @@ TC4
     Log To Console    The employee age is  ${EMPLOYEE1}[age]
     Log To Console    ${EMPLOYEE1}
     Log To Console    ${COLORS}
+
+TC5
+    Log To Console    ${PERSONAL_DETAIL}[fname]
+    Log To Console    ${PERSONAL_DETAIL}[lname]
+    Log To Console    ${PERSONAL_DETAIL}[mobile]
+    Log To Console    ${PERSONAL_DETAIL}
