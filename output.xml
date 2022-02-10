@@ -1,80 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220210 16:23:57.888" rpa="false" schemaversion="2">
-<suite id="s1" name="Hdfc Suite" source="C:\Users\Chandhana\OneDrive\Desktop\LTTS\robot_framework\selenium_suite\hdfc_suite.robot">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220210 17:04:15.643" rpa="false" schemaversion="2">
+<suite id="s1" name="Demo3 Suite" source="C:\Users\Chandhana\OneDrive\Desktop\LTTS\robot_framework\robot_suite\demo3_suite.robot">
 <test id="s1-t1" name="TC1">
-<kw name="Append To Environment Variable" library="OperatingSystem">
-<arg>path</arg>
-<arg>${EXECDIR}\\drivers</arg>
-<doc>Appends given ``values`` to environment variable ``name``.</doc>
-<msg timestamp="20220210 16:23:58.242" level="INFO">Environment variable 'path' set to value 'C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_162\bin;C:\Program Files\Java\jre1.8.0_162\bin;C:\Program Files\Git\cmd;C:\Users\Chandhana\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\Chandhana\AppData\Local\Programs\Python\Python310\;C:\Users\Chandhana\AppData\Local\Microsoft\WindowsApps;;C:\Users\Chandhana\OneDrive\Desktop\LTTS\robot_framework\drivers'.</msg>
-<status status="PASS" starttime="20220210 16:23:58.242" endtime="20220210 16:23:58.242"/>
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${firstname}</arg>
+<arg>chandana</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<msg timestamp="20220210 17:04:15.690" level="INFO">${firstname} = chandana</msg>
+<status status="PASS" starttime="20220210 17:04:15.689" endtime="20220210 17:04:15.690"/>
 </kw>
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>url=https://netbanking.hdfcbank.com/netbanking/</arg>
-<arg>browser=chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220210 16:23:58.244" level="INFO">Opening browser 'chrome' to base url 'https://netbanking.hdfcbank.com/netbanking/'.</msg>
-<status status="PASS" starttime="20220210 16:23:58.244" endtime="20220210 16:24:00.651"/>
+<kw name="Set Variable" library="BuiltIn">
+<var>${lastname}</var>
+<arg>suresh</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220210 17:04:15.691" level="INFO">${lastname} = suresh</msg>
+<status status="PASS" starttime="20220210 17:04:15.690" endtime="20220210 17:04:15.691"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220210 16:24:00.652" endtime="20220210 16:24:00.785"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${firstname} ${lastname}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220210 17:04:15.691" endtime="20220210 17:04:15.692"/>
 </kw>
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>5s</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220210 16:24:00.785" endtime="20220210 16:24:00.787"/>
+<kw name="Create List" library="BuiltIn">
+<var>@{fruits}</var>
+<arg>apple</arg>
+<arg>banana</arg>
+<arg>grapes</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20220210 17:04:15.693" level="INFO">@{fruits} = [ apple | banana | grapes ]</msg>
+<status status="PASS" starttime="20220210 17:04:15.692" endtime="20220210 17:04:15.693"/>
 </kw>
-<kw name="Comment" library="BuiltIn">
-<arg>switching to frame</arg>
-<doc>Displays the given messages in the log file as keyword arguments.</doc>
-<status status="PASS" starttime="20220210 16:24:00.788" endtime="20220210 16:24:00.788"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${fruits}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220210 17:04:15.693" endtime="20220210 17:04:15.695"/>
 </kw>
-<kw name="Select Frame" library="SeleniumLibrary">
-<arg>xpath=//frame[@name='login_page']</arg>
-<doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20220210 16:24:00.791" level="INFO">Selecting frame 'xpath=//frame[@name='login_page']'.</msg>
-<status status="PASS" starttime="20220210 16:24:00.789" endtime="20220210 16:24:00.843"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${fruits}[0]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220210 17:04:15.695" endtime="20220210 17:04:15.696"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name=fldLoginUserId</arg>
-<arg>john</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220210 16:24:00.845" level="INFO">Typing text 'john' into text field 'name=fldLoginUserId'.</msg>
-<status status="PASS" starttime="20220210 16:24:00.845" endtime="20220210 16:24:00.939"/>
+<for flavor="IN">
+<var>${color}</var>
+<value>@{fruits}</value>
+<iter>
+<var name="${color}">apple</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${color}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220210 17:04:15.696" endtime="20220210 17:04:15.697"/>
 </kw>
-<kw name="Comment" library="BuiltIn">
-<arg>click on continue</arg>
-<doc>Displays the given messages in the log file as keyword arguments.</doc>
-<status status="PASS" starttime="20220210 16:24:00.940" endtime="20220210 16:24:00.940"/>
+<status status="PASS" starttime="20220210 17:04:15.696" endtime="20220210 17:04:15.697"/>
+</iter>
+<iter>
+<var name="${color}">banana</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${color}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220210 17:04:15.697" endtime="20220210 17:04:15.697"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>link=CONTINUE</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220210 16:24:00.940" level="INFO">Clicking element 'link=CONTINUE'.</msg>
-<status status="PASS" starttime="20220210 16:24:00.940" endtime="20220210 16:24:01.658"/>
+<status status="PASS" starttime="20220210 17:04:15.697" endtime="20220210 17:04:15.697"/>
+</iter>
+<iter>
+<var name="${color}">grapes</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${color}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220210 17:04:15.697" endtime="20220210 17:04:15.698"/>
 </kw>
-<kw name="Comment" library="BuiltIn">
-<arg>switch to main url</arg>
-<doc>Displays the given messages in the log file as keyword arguments.</doc>
-<status status="PASS" starttime="20220210 16:24:01.658" endtime="20220210 16:24:01.659"/>
+<status status="PASS" starttime="20220210 17:04:15.697" endtime="20220210 17:04:15.698"/>
+</iter>
+<status status="PASS" starttime="20220210 17:04:15.696" endtime="20220210 17:04:15.698"/>
+</for>
+<kw name="Log List" library="Collections">
+<arg>${fruits}</arg>
+<doc>Logs the length and contents of the ``list`` using given ``level``.</doc>
+<msg timestamp="20220210 17:04:15.699" level="INFO">List length is 3 and it contains following items:
+0: apple
+1: banana
+2: grapes</msg>
+<status status="PASS" starttime="20220210 17:04:15.699" endtime="20220210 17:04:15.699"/>
 </kw>
-<kw name="Unselect Frame" library="SeleniumLibrary">
-<doc>Sets the main frame as the current frame.</doc>
-<status status="PASS" starttime="20220210 16:24:01.659" endtime="20220210 16:24:01.663"/>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${otp}</arg>
+<arg>9876</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220210 17:04:15.700" level="INFO">${otp} = 9876</msg>
+<status status="PASS" starttime="20220210 17:04:15.700" endtime="20220210 17:04:15.701"/>
 </kw>
-<status status="PASS" starttime="20220210 16:23:58.241" endtime="20220210 16:24:01.664"/>
+<status status="PASS" starttime="20220210 17:04:15.688" endtime="20220210 17:04:15.702"/>
 </test>
-<status status="PASS" starttime="20220210 16:23:57.889" endtime="20220210 16:24:01.666"/>
+<test id="s1-t2" name="TC2">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${otp}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220210 17:04:15.704" endtime="20220210 17:04:15.705"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{dic}</var>
+<arg>firstname=chandana</arg>
+<arg>lastname=suresh</arg>
+<arg>mobile=9876543210</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220210 17:04:15.706" level="INFO">&amp;{dic} = { firstname=chandana | lastname=suresh | mobile=9876543210 }</msg>
+<status status="PASS" starttime="20220210 17:04:15.705" endtime="20220210 17:04:15.706"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${dic}[lastname]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220210 17:04:15.706" endtime="20220210 17:04:15.706"/>
+</kw>
+<status status="PASS" starttime="20220210 17:04:15.704" endtime="20220210 17:04:15.707"/>
+</test>
+<status status="PASS" starttime="20220210 17:04:15.645" endtime="20220210 17:04:15.709"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Hdfc Suite">Hdfc Suite</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Demo3 Suite">Demo3 Suite</stat>
 </suite>
 </statistics>
 <errors>
